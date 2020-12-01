@@ -1,4 +1,7 @@
 # EvaMars Robot 
+
+Robot Information
+-----------------
 The EvaMars robot is a Mars reconnaissance robot model developed for the Uplat (theuplat.com) environment. It is modeled to be able to perform exploration missions in the Martian environment, conduct drilling works, and move in the harsh terrain of the environment. A possible Mars exploration scenario was created by means of Eva-Mars and robotics training packages were revealed with this scenario.
 
 ![Image of EvaMars](https://github.com/inomuh/eva_mars/blob/main/eva_mars.png)
@@ -6,6 +9,22 @@ The EvaMars robot is a Mars reconnaissance robot model developed for the Uplat (
 - eva_mars_description: It is the sub-package containing urdf and mesh files of the EvaMars.
 - eva_mars_simulation: It is a sub-package containing the package and launch files required for the simulation of the EvaMars.
 - eva_mars_control: It is a sub-package containing the EvaMars drill and camera port controller's launch and config files.
+
+UPlat EvaMars Training Missions
+-------------------------------
+EvaMars Robot is a Mars mission training robot developed by Inovasyon Mühendislik for UPlat virtual laboratory. A robotic simulation was created with a Gazebo environment built from a real Mars map, along with a training package of seven different Mars missions. With the training to be carried out in this simulation environment, users are expected to complete this training by performing Mars exploration missions with various participation ways. In line with this training that UPlat will provide us, a robotics training has emerged that can be completed by users with intermediate ROS and Python knowledge. 
+
+![Image of EvaMars Mission Diagram](https://github.com/inomuh/eva_mars/blob/noetic-devel/eva_mars_missions.png)
+
+This Github repository contains only the robot model and basic ROS packages. For experiments, the Martian environment and more:
+
+    UPlat Virtual Laboratory: https://www.theuplat.com/home
+
+![Image of EvaMars Mission IV](https://github.com/inomuh/eva_mars/blob/noetic-devel/evamars_uplat_mars_rockylake_1.png)
+
+
+Launch Commands
+---------------
 
 Gazebo Launching:
 
@@ -56,9 +75,11 @@ NOTE: If the "catkin_make" operation fails after installing hector_gazebo, the p
         $ cd ~/catkin_ws/src/eva_mars/eva_mars_control/scripts
         $ chmod +x sondaj_control.py
 
+![Image of EvaMars Mission V](https://github.com/inomuh/eva_mars/blob/noetic-devel/mission5_3_1.png)
+
 -------------------------------------------------------------------------------
 Changelog:
 ----------
-Update v1.0 - 26.11.20
+Update v1.0 - 01.12.20
 ----------------------
 - First version
