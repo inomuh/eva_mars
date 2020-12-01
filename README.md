@@ -80,6 +80,6 @@ NOTE: If the "catkin_make" operation fails after installing hector_gazebo, the p
 -------------------------------------------------------------------------------
 Changelog:
 ----------
-Update v1.0 - 26.11.20
+Update v1.0 - 01.12.20
 ----------------------
 - First version
