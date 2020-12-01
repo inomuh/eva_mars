@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<launch>
+  <!-- Point cloud to laser scan -->
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+	
+	<remap from="cloud_in" to="/Realsense_Camera_Depth/depthcam/points"/>
+	<remap from="scan" to="/laser_scan"/>
+	
+	<param name="target_frame" type="string" value="camera_link"/> <!--Leave disabled to output scan in pointcloud frame-->
+	<param name="transform_tolerance" type="string" value="0.01"/>
+	<param name="min_height" type="string" value="0.0"/>
+	<param name="max_height" type="string" value="1.0"/>
+	<param name="angle_min" type="string" value="-1.5700"/>
+	<param name="angle_max" type="string" value="1.5700"/>
+	<param name="angle_increment" type="string" value="0.0087"/>
+	<param name="scan_time" type="string" value="0.3333"/>
+	<param name="range_min" type="string" value="0.45"/>
+	<param name="range_max" type="string" value="4.0"/>
+	<param name="use_inf" type="string" value="true"/>
+	
+	<!--	# Concurrency level, affects number of pointclouds queued for processing and number of threads use
+		# 0 : Detect number of cores
+		# 1 : Single threaded
+		# 2 -> inf : Parallelism level -->
+	<param name="concurrency_level" type="string" value="1"/>
+    </node>
+</launch>
+

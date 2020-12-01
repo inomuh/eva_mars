@@ -1,0 +1,662 @@
+<?xml version='1.0'?>
+<robot name='eva_mars'>
+  
+  <!-- Base Footprint 
+    <link name="base_footprint"/> 
+    <joint name="base_footprint_joint" type="fixed">     	
+	<parent link="base_footprint"/>
+     	<child link="base_link"/>	
+    </joint> -->
+    
+    
+   <!-- Base_Link (Taban)-->
+   
+    <link name='base_link'>
+    	<inertial>
+      	  <mass value="10.0"/>
+      	  <origin xyz="0 0 0.12"/>
+      	  <inertia ixx="0.149" ixy="0.0" ixz="0.0" iyy="0.098" iyz="0.0" izz="0.2433"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="1.57 0 1.57" xyz="-0.12 0.0 0.14"/>
+      	    <geometry>
+        	<!--<box size ="0.33 0.42 0.05"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/base_taban.stl" scale="0.0035 0.0009 0.0015"/>
+      	    </geometry>
+      	    <material name="ChassisBlack">
+        	    <color rgba="0.0 0.0 1.0 1.0"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0 0 0.08"/>
+      	    <geometry>
+        	    <box size ="0.42 0.33 0.05"/>
+      	    </geometry>
+    	</collision> 
+    	  
+     </link>
+     
+   <!-- Base_link (Govde) -->
+     
+     <link name= 'base_govde'>
+
+    	<visual>
+      	  <origin rpy="0 0 0" xyz="0.075 -0.145 -0.07"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/model.stl" scale="0.0115 0.013 0.013"/>
+        	<!--<box size = "0.34 0.42 0.16"/>-->
+      	    </geometry>
+      	    <material name="ChassisBlue">
+        	    <color rgba="0.0 0.0 1.0 1.0"/>
+      	    </material>
+    	</visual>  
+    	
+    </link> 
+    
+     <joint name="base_govde_joint" type="fixed">
+    	<origin rpy="0 0 0" xyz="0.0 -0.0 0.01"/>
+    	<parent link="base_link"/>
+    	<child link="base_govde"/>
+     </joint>
+    
+  <!-- Wheels -->
+  
+    <link name='right_back_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	    <geometry>
+      	        <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>   
+     </link>
+     
+     <joint name="right_back_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="-0.1825 -0.20 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="right_back_wheel"/>
+     </joint>
+     
+    <link name='right_middle_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	    <geometry>
+        	    <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>     
+     </link>
+     
+     <joint name="right_middle_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="0.0 -0.20 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="right_middle_wheel"/>
+     </joint>
+     
+    <link name='right_front_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	    <geometry>
+        	    <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>    
+     </link>
+     
+     <joint name="right_front_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="0.1825 -0.20 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="right_front_wheel"/>
+     </joint>
+     
+    <link name='left_back_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="-0.0 0.0 0.0"/>
+      	    <geometry>
+        	    <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>   
+     </link>
+     
+     <joint name="left_back_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="-0.1825 0.20 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="left_back_wheel"/>
+     </joint>
+     
+    <link name='left_middle_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	    <geometry>
+        	    <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>   
+     </link>
+     
+     <joint name="left_middle_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="0.0 0.2 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="left_middle_wheel"/>
+     </joint>
+     
+    <link name='left_front_wheel'>
+    	<inertial>
+      	  <mass value="3.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.0054" ixy="0.0" ixz="0.0" iyy="0.0054" iyz="0.0" izz="0.0054"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
+      	    <geometry>
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	<collision>
+      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	    <geometry>
+        	    <cylinder length ="0.0575" radius ="0.045"/>
+      	    </geometry>
+    	</collision>   
+     </link>
+
+     <joint name="left_front_joint" type="continuous">
+    	<axis xyz="0 0 -1"/>
+    	<origin rpy="1.57 0 0" xyz="0.1825 0.20 0.0575"/>
+    	<parent link="base_link"/>
+    	<child link="left_front_wheel"/>
+     </joint> 
+
+<!-- Camera Port -->
+    <link name='camera_port'>
+    	<inertial>
+      	  <mass value="1.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.00016667" ixy="0.0" ixz="0.0" iyy="0.0001667" iyz="0.0" izz="0.0001667"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 0 0" xyz="0 0 -0.3"/>
+      	    <geometry>
+        	<!--<box size="0.05 0.02 0.3"/> -->
+        	    <mesh filename="package://eva_mars_description/meshes/drillbox.stl" scale="0.0008 0.0008 0.010"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    <!--	<collision>
+      	   <origin rpy="0 0 0" xyz="0 0 0"/>
+      	     <geometry>
+        	<box size="0.05 0.05 0.3"/>
+      	     </geometry>
+    	</collision> -->  
+    </link>
+
+    <joint name="camera_port_joint" type="continuous">
+    	<axis xyz="0 0 1"/>
+    	<origin rpy="0 0 -1.57" xyz="-0.2 0.0 0.48"/>
+    	<parent link="base_link"/>
+    	<child link="camera_port"/>
+    	<limit effort="10.0" lower="-0.10" upper="0.10" velocity="0.5"/>
+    </joint>
+     
+<!-- Camera Link -->
+    <link name="camera_link">
+     	<collision>
+     	    <origin xyz="0 0 0" rpy="-1.57 0 0"/>
+	        <geometry>
+		        <box size="0.015 0.031 0.027"/>
+	        </geometry>
+	    </collision>
+
+	    <visual>
+	        <origin xyz="0 0 0" rpy="-1.57 0 -1.570796"/>
+	        <geometry>
+	            <mesh filename="package://eva_mars_description/meshes/camera.stl" scale="0.0011 0.0011 0.0011"/> 
+	        </geometry>
+	    </visual>
+    </link>
+
+    <joint name="camera_joint" type="fixed">
+		<origin xyz="0.0 0.04 0.158" rpy="0 0 1.570796"/>
+		<parent link="camera_port"/>
+		<child link="camera_link"/>
+    </joint>
+
+    <joint name="camera_rgb_joint" type="fixed">
+		<origin xyz="0.003 0.011 0.009" rpy="1.57 0 0"/>
+		<parent link="camera_link"/>
+		<child link="camera_rgb_frame"/>
+    </joint>
+	 
+    <link name="camera_rgb_frame"/>
+
+    <joint name="camera_rgb_optic_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="1.57 -1.57 1.57"/>
+		<parent link="camera_rgb_frame"/>
+		<child link="camera_rgb_optic_frame"/>
+    </joint>
+     
+    <link name="camera_rgb_optic_frame"/>
+
+
+<!-- Sondaj Components -->
+
+     <link name="sondaj_link">
+
+    	<inertial>
+      	  <mass value="1.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.00016667" ixy="0.0" ixz="0.0" iyy="0.0001667" iyz="0.0" izz="0.0001667"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 0 0" xyz="0 0 0"/>
+      	    <geometry>
+        	    <cylinder length="0.13" radius="0.015"/> 
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	
+     </link>
+     
+     <joint name="sondaj_joint" type="prismatic">
+    	<axis xyz="0 0 1"/>
+	    <origin xyz="0.26 0.0 0.21" rpy="0 0 1.570796"/>
+	    <parent link="base_link"/>
+	    <child link="sondaj_link"/>
+	    <limit effort="10.0" lower="-0.04" upper="0.01" velocity="0.5"/>
+     </joint>
+     
+     <link name="sondaj2_link">
+
+    	<inertial>
+      	  <mass value="1.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.00016667" ixy="0.0" ixz="0.0" iyy="0.0001667" iyz="0.0" izz="0.0001667"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 0 0" xyz="0 0 0"/>
+      	    <geometry>
+        	    <cylinder length="0.08" radius="0.01"/>
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	
+     </link>
+     
+     <joint name="sondaj2_joint" type="prismatic">
+    	<axis xyz="0 0 1"/>
+	    <origin xyz="0.26 0.0 0.19" rpy="0 0 1.570796"/>
+	    <parent link="base_link"/>
+	    <child link="sondaj2_link"/>
+	    <limit effort="10.0" lower="-0.10" upper="0.00" velocity="0.5"/>
+     </joint>
+     
+     <link name="sondaj3_link">
+
+    	<inertial>
+      	  <mass value="1.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.00016667" ixy="0.0" ixz="0.0" iyy="0.0001667" iyz="0.0" izz="0.0001667"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 0 0" xyz="0 0 0"/>
+      	    <geometry>
+        	<!--<cylinder length="0.07" radius="0.005"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/drill.stl" scale="0.015 0.015 0.03"/> 
+      	    </geometry>
+      	    <material name="WheelBlack">
+        	    <color rgba="0.117 0.117 0.117 1"/>
+      	    </material>
+    	</visual>
+    	
+     </link>
+     
+     <joint name="sondaj3_joint" type="prismatic">
+    	<axis xyz="0 0 1"/>
+	    <origin xyz="0.26 0.0 0.135" rpy="0 0 1.570796"/>
+	    <parent link="base_link"/>
+	    <child link="sondaj3_link"/>
+	    <limit effort="10.0" lower="-0.24" upper="0.00" velocity="0.5"/>
+     </joint>
+  
+     <link name="sondaj_box_link">
+
+    	<inertial>
+      	  <mass value="1.0"/>
+      	  <origin xyz="-0.0 0.0 0.0"/>
+      	  <inertia ixx="0.00016667" ixy="0.0" ixz="0.0" iyy="0.0001667" iyz="0.0" izz="0.0001667"/>
+    	</inertial>
+    
+    	<visual>
+      	  <origin rpy="0 0 1.57" xyz="0 0 0"/>
+      	    <geometry>
+        	<!--<box size="0.04 0.04 0.14"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/drillbox.stl" scale="0.001 0.001 0.004"/> 
+      	    </geometry>
+      	    <material name="ChassisBlack">
+        	    <color rgba="0.0 0.0 1.0 1.0"/>
+      	    </material>
+    	</visual>
+    	
+     </link>
+     
+     <joint name="sondaj_box_joint" type="fixed">
+	    <origin xyz="0.26 0.0 0.143" rpy="0 0 0"/>
+	    <parent link="base_link"/>
+	    <child link="sondaj_box_link"/>
+     </joint>
+     
+   
+<!-- Components' Gazebo References -->
+
+
+    <gazebo reference="base_govde">
+    	<material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="camera_link">
+    	<material value="Gazebo/DarkGrey"/>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="sondaj_link">
+    	<material value="Gazebo/Grey"/>
+    </gazebo>
+    <gazebo reference="sondaj2_link">
+    	<material value="Gazebo/Grey "/>
+    </gazebo>
+    <gazebo reference="sondaj3_link">
+    	<material value="Gazebo/DarkGrey "/>
+    </gazebo>
+    <gazebo reference="sondaj_box_link">
+    	<material value="Gazebo/DarkGrey"/>
+    </gazebo>
+    <gazebo reference="camera_port">
+    	<material value="Gazebo/DarkGrey"/>
+    </gazebo>
+    <gazebo reference="left_front_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_middle_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_back_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="right_front_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="right_middle_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="right_back_wheel">
+    	<material>Gazebo/Black</material>
+    </gazebo>
+
+<!-- Diff Drive 6W Plugin -->
+    <gazebo>
+      <plugin name="diffdrive_plugin_6w" filename="libdiffdrive_plugin_6w.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>20.0</updateRate>
+	    <frontLeftJoint>left_front_joint</frontLeftJoint>
+	    <frontRightJoint>right_front_joint</frontRightJoint>
+	    <midLeftJoint>left_middle_joint</midLeftJoint>
+	    <midRightJoint>right_middle_joint</midRightJoint>
+	    <rearLeftJoint>left_back_joint</rearLeftJoint>
+	    <rearRightJoint>right_back_joint</rearRightJoint>
+        <wheelSeparation>0.2</wheelSeparation>
+        <wheelDiameter>0.02</wheelDiameter>
+        <torque>240</torque>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+      </plugin>
+</gazebo>
+     
+<!-- Joint State Publisher -->
+
+     <gazebo>
+        <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+           <robotNamespace></robotNamespace>
+           <jointName>right_front_joint, right_middle_joint, right_back_joint, left_front_joint, left_middle_joint, left_back_joint, sondaj_joint, sondaj2_joint, sondaj3_joint, camera_port_joint</jointName>
+           <updateRate>10.0</updateRate>
+           <alwaysOn>true</alwaysOn>
+        </plugin>
+    </gazebo>
+    
+<!-- Depth Camera Plugin -->
+  <gazebo reference="camera_link">
+    <sensor type="depth" name="Realsense_Camera_Depth">
+      <always_on>true</always_on>
+      <update_rate>1.0</update_rate>
+		<camera>
+			<horizontal_fov>1.3962634</horizontal_fov>
+			<image>
+				<width>640</width>
+				<height>480</height>
+				<format>R8G8B8</format>
+			</image>
+			<clip>
+				<near>0.01</near>
+				<far>5</far>
+			</clip>
+		</camera>
+
+        <plugin name="depth_camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>1.0</updateRate>
+          <cameraName>Realsense_Camera_Depth</cameraName>
+          <imageTopicName>depthcam/image_raw</imageTopicName>
+          <cameraInfoTopicName>depthcam/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>depthcam/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>depthcam/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>depthcam/points</pointCloudTopicName>
+          <frameName>camera_rgb_optic_frame</frameName>
+          <pointCloudCutoff>0.0</pointCloudCutoff>
+          <distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>    
+    </sensor>
+  </gazebo>
+
+<!-- RGB Camera Plugin -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="Realsense_Camera_RGB">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+	<camera>
+	   <horizontal_fov>1.3962634</horizontal_fov>
+	   <image>
+		<width>640</width>
+		<height>480</height>
+		<format>R8G8B8</format>
+	   </image>
+	   <clip>
+		<near>0.02</near>
+		<far>300</far>
+	   </clip>
+	   <noise>
+		<type>gaussian</type>
+		<!-- Noise is sampled independently per pixel on each frame.
+		       That pixel's noise value is added to each of its color
+		       channels, which at that point lie in the range [0,1]. -->
+		<mean>0.0</mean>
+		<stddev>0.007</stddev>
+	   </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>Realsense_Camera_RGB</cameraName>
+        <frameName>camera_rgb_optic_frame</frameName>
+        <imageTopicName>RGB/image_raw</imageTopicName>
+        <cameraInfoTopicName>RGB/camera_info</cameraInfoTopicName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+<!-- Gazebo ROS Control Plugin -->
+
+  <gazebo>
+  	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    	<robotNamespace>eva_mars</robotNamespace>
+    	<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+  	</plugin>
+  </gazebo>
+
+<!-- Transmission Block (for Sondaj Component)-->
+
+  <transmission name="tran_sondaj">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="sondaj_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="sondaj_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran_sondaj2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="sondaj2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="sondaj2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran_sondaj3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="sondaj3_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="sondaj3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran_camera_port">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="camera_port_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="camerport_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>
+
+

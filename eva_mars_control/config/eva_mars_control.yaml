@@ -1,0 +1,24 @@
+eva_mars:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Position Controllers ---------------------------------------
+  sondaj_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sondaj_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  sondaj2_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sondaj2_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  sondaj3_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sondaj3_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  camera_port_joint_position_controller:
+    type: position_controllers/JointPositionController
+    joint: camera_port_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
