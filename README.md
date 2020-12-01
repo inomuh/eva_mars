@@ -16,11 +16,11 @@ EvaMars Robot is a Mars mission training robot developed by Inovasyon Mühendisl
 
 ![Image of EvaMars Mission Diagram](https://github.com/inomuh/eva_mars/blob/noetic-devel/eva_mars_missions.png)
 
-![Image of EvaMars Mission IV](https://github.com/inomuh/eva_mars/blob/noetic-devel/evamars_uplat_mars_rockylake_1.png)
-
 This Github repository contains only the robot model and basic ROS packages. For experiments, the Martian environment and more:
 
     UPlat Virtual Laboratory: https://www.theuplat.com/home
+
+![Image of EvaMars Mission IV](https://github.com/inomuh/eva_mars/blob/noetic-devel/evamars_uplat_mars_rockylake_1.png)
 
 
 Launch Commands
