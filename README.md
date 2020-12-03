@@ -14,13 +14,13 @@ UPlat EvaMars Training Missions
 -------------------------------
 EvaMars Robot is a Mars mission training robot developed by Inovasyon Mühendislik for UPlat virtual laboratory. A robotic simulation was created with a Gazebo environment built from a real Mars map, along with a training package of seven different Mars missions. With the training to be carried out in this simulation environment, users are expected to complete this training by performing Mars exploration missions with various participation ways. In line with this training that UPlat will provide us, a robotics training has emerged that can be completed by users with intermediate ROS and Python knowledge. 
 
-![Image of EvaMars Mission Diagram](https://github.com/inomuh/eva_mars/blob/noetic-devel/images/eva_mars_missions.png)
+![Image of EvaMars Mission Diagram](https://github.com/inomuh/eva_mars/blob/main/images/eva_mars_missions.png)
 
 This Github repository contains only the robot model and basic ROS packages. For experiments, the Martian environment and more:
 
     UPlat Virtual Laboratory: https://www.theuplat.com/home
 
-![Image of EvaMars Mission IV](https://github.com/inomuh/eva_mars/blob/noetic-devel/images/evamars_uplat_mars_rockylake_1.png)
+![Image of EvaMars Mission IV](https://github.com/inomuh/eva_mars/blob/main/images/evamars_uplat_mars_rockylake_1.png)
 
 
 Launch Commands
@@ -75,7 +75,7 @@ NOTE: If the "catkin_make" operation fails after installing hector_gazebo, the p
         $ cd ~/catkin_ws/src/eva_mars/eva_mars_control/scripts
         $ chmod +x sondaj_control.py
 
-![Image of EvaMars Mission V](https://github.com/inomuh/eva_mars/blob/noetic-devel/images/mission5_3_1.png)
+![Image of EvaMars Mission V](https://github.com/inomuh/eva_mars/blob/main/images/mission5_3_1.png)
 
 -------------------------------------------------------------------------------
 Changelog:
