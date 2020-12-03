@@ -58,14 +58,14 @@ Requirements:
 
         $ sudo apt install ros-noetic-ros-controllers
  
-- In order for the robot's differential drive plugin to work, "hector_gazebo" package must be downloaded to your computer.
+- In order for the robot's differential drive plugin to work, "hector_gazebo" package must be downloaded to your workspace.
         
         $ cd ~/catkin_ws/src
         $ git clone https://github.com/tu-darmstadt-ros-pkg/hector_gazebo -b melodic-devel
 
 NOTE: If the "catkin_make" operation fails after installing hector_gazebo, the problem can be solved by deleting the faulty hector_gazebo plugin parts from CMakeList. This will fix the noetic incompatibility.
 
-- In order for the "laserscan" to work, "pointcloud_to_laserscan" package must be downloaded to your computer.
+- In order for the "laserscan" to work, "pointcloud_to_laserscan" package must be downloaded to your workspace.
 
         $ cd ~/catkin_ws/src
         $ git clone https://github.com/ros-perception/pointcloud_to_laserscan
