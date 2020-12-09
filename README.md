@@ -2,7 +2,7 @@
 
 Robot Information
 -----------------
-The EvaMars robot is a Mars reconnaissance robot model developed for the Uplat (theuplat.com) environment. It is modeled to be able to perform exploration missions in the Martian environment, conduct drilling works, and move in the harsh terrain of the environment. A possible Mars exploration scenario was created by means of Eva-Mars and robotics training packages were revealed with this scenario.
+The EvaMars robot is a Mars reconnaissance robot model developed for the Uplat (theuplat.com) environment. It is modeled to be able to perform exploration missions in the Martian environment, conduct drilling works, and move in the harsh terrain of the environment. A possible Mars exploration scenario was created by means of EvaMars and robotics training packages were revealed with this scenario.
 
 ![Image of EvaMars](https://github.com/inomuh/eva_mars/blob/main/images/eva_mars.png)
 
