@@ -79,9 +79,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-      	        <cylinder length ="0.0575" radius ="0.045"/>
+      	        <!--<cylinder length ="0.0575" radius ="0.045"/> -->
+      	        <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>   
      </link>
@@ -110,9 +111,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-        	    <cylinder length ="0.0575" radius ="0.045"/>
+        	    <!--<cylinder length ="0.0575" radius ="0.045"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>     
      </link>
@@ -141,9 +143,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-        	    <cylinder length ="0.0575" radius ="0.045"/>
+        	    <!--<cylinder length ="0.0575" radius ="0.045"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>    
      </link>
@@ -172,9 +175,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="-0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-        	    <cylinder length ="0.0575" radius ="0.045"/>
+        	    <!--<cylinder length ="0.0575" radius ="0.045"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>   
      </link>
@@ -203,9 +207,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-        	    <cylinder length ="0.0575" radius ="0.045"/>
+        	    <!--<cylinder length ="0.0575" radius ="0.045"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>   
      </link>
@@ -234,9 +239,10 @@
       	    </material>
     	</visual>
     	<collision>
-      	   <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      	   <origin rpy="0 1.57 0" xyz="0.054 -0.054 0.02"/>
       	    <geometry>
-        	    <cylinder length ="0.0575" radius ="0.045"/>
+        	    <!--<cylinder length ="0.0575" radius ="0.045"/>-->
+        	    <mesh filename="package://eva_mars_description/meshes/wheel.stl" scale="0.025 0.025 0.025"/>
       	    </geometry>
     	</collision>   
      </link>
@@ -658,5 +664,4 @@
     </actuator>
   </transmission>
 </robot>
-
 
