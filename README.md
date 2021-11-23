@@ -52,8 +52,7 @@ Requirements:
 -------------
 - In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
 
-        $ sudo apt update
-        $ sudo apt install ros-noetic-joint-state-publisher-gui
+        $ sudo apt update && sudo apt install ros-noetic-joint-state-publisher-gui
         
 - In order for the "joint_state_controller" to work, "joint_state_controller_gui" package must be downloaded to your computer.
 
@@ -61,20 +60,17 @@ Requirements:
  
 - In order for the robot's differential drive plugin to work, "hector_gazebo" package must be moved from eva_mars folder to workspace folder.
 
-        $ cd catkin_ws/src/eva_mars
-        $ mv hector_gazebo ~/catkin_ws/src
+        $ cd catkin_ws/src/eva_mars && mv hector_gazebo ~/catkin_ws/src
 
 NOTE: If the "catkin_make" operation fails after installing hector_gazebo, the problem can be solved by deleting the faulty hector_gazebo plugin parts from CMakeList. This will fix the noetic incompatibility.
 
 - In order for the "laserscan" to work, "pointcloud_to_laserscan" package must be downloaded to your workspace.
 
-        $ cd ~/catkin_ws/src
-        $ git clone https://github.com/ros-perception/pointcloud_to_laserscan
+        $ cd ~/catkin_ws/src && git clone https://github.com/ros-perception/pointcloud_to_laserscan
         
 - In order for the "sondaj_control.py" file (for controlling drill and camera port script) in "eva_mars_control/scripts" to work, the following commands should be run.
 
-        $ cd ~/catkin_ws/src/eva_mars/eva_mars_control/scripts
-        $ chmod +x sondaj_control.py
+        $ cd ~/catkin_ws/src/eva_mars/eva_mars_control/scripts && chmod +x sondaj_control.py
 
 ![Image of EvaMars Mission V](https://github.com/inomuh/eva_mars/blob/main/images/mission5_3_1.png)
 
