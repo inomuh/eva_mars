@@ -84,3 +84,7 @@ Changelog:
 Update v1.0 - 01.12.20
 ----------------------
 - First version
+
+Update v1.0.1 - 23.11.21
+----------------------
+- Fixed wheels' collisions
